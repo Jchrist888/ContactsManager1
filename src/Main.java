@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
+        // Créer le gestionnaire de contacts
         ContactsManager myContactsManager = new ContactsManager();
 
         // Contact 1
@@ -33,13 +34,14 @@ public class Main {
         contact5.phoneNumber = "0623456789";
         myContactsManager.addContact(contact5);
 
-        // Recherche de contact et afficher son numéro
+        // Rechercher un contact et afficher son numéro
         Contact found = myContactsManager.searchContact("Alice");
         if (found != null) {
             System.out.println("\nRecherche de Alice :");
             System.out.println("Nom : " + found.name);
             System.out.println("Téléphone : " + found.phoneNumber);
         } else {
+            // Si le contact n'existe pas
             System.out.println("Contact non trouvé.");
         }
     }
